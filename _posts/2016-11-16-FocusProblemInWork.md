@@ -9,10 +9,10 @@ title: OnKeyListener的onKey()方法问题和焦点问题
 &#160;&#160;&#160;&#160;这个实体键盘某个按键会让焦点变到某一个控件，且与软键盘变动不一致。且点击事件一样无法被消费。  
 &#160;&#160;&#160;&#160;在使用这个按键的控件的属性内设置：
 
-    android:nextFocusLeft="@id/id_of_itself"
-    android:nextFocusRight="@id/id_of_itself"
-    android:nextFocusUp="@id/id_of_itself"
-    android:nextFocusDown="@id/id_of_itself"
-    android:nextFocusForward="@id/id_of_itself"
+	android:nextFocusLeft="@id/id_of_itself"
+	android:nextFocusRight="@id/id_of_itself"
+	android:nextFocusUp="@id/id_of_itself"
+	android:nextFocusDown="@id/id_of_itself"
+	android:nextFocusForward="@id/id_of_itself"
     
 &#160;&#160;&#160;&#160;经测试发现有效。另外EditText控件的android:imeOptions属性实际上只有改变enter键显示图标的作用（实际上也可以通过代码判断这个属性，从而做出不同的操作）。
