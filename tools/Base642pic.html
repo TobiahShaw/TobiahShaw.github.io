@@ -10,6 +10,12 @@
     var base64 = area.value;
     image.src= base64;
   }
+  function resetAll(){
+    var image = document.getElementById("pic");
+    var area = document.getElementById("base64");
+    image.src='';
+    area.value='';
+  }
   </script>
   <style type="text/css">
 		td {
@@ -37,6 +43,7 @@
       <tr><td><br></td></tr>
       <tr><td><br></td></tr>
       <tr><td><input class = "button" type="button" value = "decode" onclick="parse2pic()"></td></tr>
+      <tr></td><td><input class = "button" type="button" value = "reset" onclick="resetAll()"></td></tr>
       <tr><td><br></td></tr>
       <tr><td><br></td></tr>
       <tr><td><img id="pic"></td></tr>
