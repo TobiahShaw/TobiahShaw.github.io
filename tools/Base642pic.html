@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  function parse2pic(){
+
+    var image = document.getElementById("pic");
+    
+    var area = document.getElementById("base64");
+    var base64 = area.value;
+    image.src= base64;
+  }
+  </script>
+  <style type="text/css">
+		td {
+      	text-align:center; /*设置水平居中*/
+      	vertical-align:middle;/*设置垂直居中*/
+      	font-size: 15px;
+      	font-weight: bold;
+		}
+		img{
+		background: #66ccff;
+		}
+    h1{
+    text-align:center; /*设置水平居中*/
+    }
+    .button{
+    background:#66ccff;
+    }
+		</style>
+</head>
+<body>
+  <table width="100%">
+    <thead><h1>BASE64字符串转图片</h1><br></head>
+    <tbody>
+      <tr><td><textarea id="base64" cols = "100" rows = "10"></textarea></td></tr>
+      <tr><td><br></td></tr>
+      <tr><td><br></td></tr>
+      <tr><td><input class = "button" type="button" value = "转化" onclick="parse2pic()"></td></tr>
+      <tr><td><br></td></tr>
+      <tr><td><br></td></tr>
+      <tr><td><img id="pic"></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
