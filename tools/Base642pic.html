@@ -8,7 +8,7 @@
     
     var area = document.getElementById("base64");
     var base64 = area.value;
-    image.src= base64;
+    image.src= "data:image/jpeg;base64," + base64;
   }
   function resetAll(){
     var image = document.getElementById("pic");
@@ -19,8 +19,8 @@
   </script>
   <style type="text/css">
 		td {
-      	text-align:center; /*设置水平居中*/
-      	vertical-align:middle;/*设置垂直居中*/
+      	text-align:center; 
+      	vertical-align:middle;
       	font-size: 15px;
       	font-weight: bold;
 		}
@@ -28,7 +28,7 @@
 		background: #66ccff;
 		}
     h1{
-    text-align:center; /*设置水平居中*/
+    text-align:center; 
     }
     .button{
     background:#66ccff;
