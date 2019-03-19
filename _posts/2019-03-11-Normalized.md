@@ -1,4 +1,3 @@
-
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
@@ -105,7 +104,7 @@ plt.scatter(X[:,0], X[:,1])
 plt.show()
 ```
 
-![png](../assets/img/knn/output_8_0.png)
+![png](../assets/img/kNN/output_8_0.png)
 
 ```python
 np.mean(X[:,0])
@@ -152,7 +151,7 @@ plt.scatter(X2[:,0], X2[:,1])
 plt.show()
 ```
 
-![png](../assets/img/knn/output_16_0.png)
+![png](../assets/img/kNN/output_16_0.png)
 
 ```python
 print(np.mean(X2[:,0]))
