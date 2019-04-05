@@ -1,3 +1,14 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 # 多元线性回归中的梯度下降法
 
@@ -9,7 +20,7 @@ $$-\eta\nabla J$$
 $$\nabla J = (\frac{\partial J}{\partial \theta_0}, \frac{\partial J}{\partial \theta_1}, \ldots ,\frac{\partial J}{\partial \theta_n})$$
 梯度代表方向，对应J增大最快的方向
 
-### 目标化简
+## 目标化简
 
 线性回归目标：使
 $$\sum_{i=1}^m (y^{(i)} - \hat{y}^{(i)})^2$$
@@ -29,7 +40,7 @@ $$\nabla J(\theta) = \begin{pmatrix}
 \frac{\partial J}{\partial \theta_2} \\\\
 \ldots \\\\
 \frac{\partial J}{\partial \theta_n}
-\end{pmatrix} = 
+\end{pmatrix} =
 \begin{pmatrix}
 \sum_{i=1}^m 2(y^{(i)} - X_b^{(i)}\theta) \cdot (-1)\\\\
 \sum_{i=1}^m 2(y^{(i)} - X_b^{(i)}\theta) \cdot (-X^{(i)}_1) \\\\
