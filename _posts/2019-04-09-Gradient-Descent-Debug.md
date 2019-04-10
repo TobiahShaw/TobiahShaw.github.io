@@ -36,18 +36,15 @@ $$\frac{\partial{J}}{\partial{\theta_0}} = \frac{J(\theta_0^+) - J(\theta_0^-)}{
 
 缺点：时间复杂度比较高
 
-
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-
 ```python
 np.random.seed(666)
 X = np.random.random(size=(1000, 10))
 ```
-
 
 ```python
 true_theta = np.arange(1,12, dtype=float)
@@ -55,42 +52,23 @@ X_b = np.hstack([np.ones((len(X), 1)), X])
 y = X_b.dot(true_theta) + np.random.normal(size = 1000)
 ```
 
-
 ```python
 X.shape
 ```
 
-
-
-
-    (1000, 10)
-
-
-
+(1000, 10)
 
 ```python
 y.shape
 ```
 
-
-
-
-    (1000,)
-
-
-
+(1000,)
 
 ```python
 true_theta
 ```
 
-
-
-
-    array([ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11.])
-
-
-
+array([ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11.])
 
 ```python
 def J(theta, X_b, y):
@@ -100,12 +78,10 @@ def J(theta, X_b, y):
         return float('inf')
 ```
 
-
 ```python
 def dJ_math(theta, X_b, y):
     return X_b.T.dot(X_b.dot(theta) - y) * 2. / len(y)
 ```
-
 
 ```python
 def dJ_debug(theta, X_b, y, epsilon=0.01):
@@ -118,7 +94,6 @@ def dJ_debug(theta, X_b, y, epsilon=0.01):
         res[i] = (J(theta_1, X_b, y) - J(theta_2, X_b, y)) / (2 * epsilon)
     return res
 ```
-
 
 ```python
 def gradient_descent(dJ, x_b, y, initial_theta, eta, n_iters=10000, epsilon=1e-8):
@@ -134,7 +109,6 @@ def gradient_descent(dJ, x_b, y, initial_theta, eta, n_iters=10000, epsilon=1e-8
     return theta
 ```
 
-
 ```python
 initial_theta = np.ones((X_b.shape[1]))
 eta = 0.01
@@ -142,32 +116,19 @@ eta = 0.01
 theta
 ```
 
-    Wall time: 32 s
-    
+Wall time: 32 s
 
-
-
-
-    array([ 1.1200843 ,  2.05379431,  2.91634229,  4.12015471,  5.05100799,
+array([ 1.1200843 ,  2.05379431,  2.91634229,  4.12015471,  5.05100799,
             5.90580603,  6.97494716,  8.00169439,  8.86330612,  9.98697644,
            10.90637129])
-
-
-
 
 ```python
 %time theta = gradient_descent(dJ_math, X_b, y, initial_theta, eta)
 theta
 ```
 
-    Wall time: 4.44 s
-    
+Wall time: 4.44 s
 
-
-
-
-    array([ 1.1200843 ,  2.05379431,  2.91634229,  4.12015471,  5.05100799,
+array([ 1.1200843 ,  2.05379431,  2.91634229,  4.12015471,  5.05100799,
             5.90580603,  6.97494716,  8.00169439,  8.86330612,  9.98697644,
            10.90637129])
-
-
