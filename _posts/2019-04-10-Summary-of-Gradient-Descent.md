@@ -1,3 +1,14 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 # 梯度下降法
 
@@ -6,6 +17,7 @@
 - 小批量梯度下降法（Mini-Batch Gradient Descent）
 
 ## 随机
+
 - 跳出局部最优解
 - 更快的运行速度
 - 机器学习领域很多算法都要使用随机的特点：随机搜索，随机森林
@@ -15,5 +27,6 @@
 $$+\eta\frac{dJ}{d\theta}$$
 
 ## 注意
+
 - 不是一个机器学习算法
 - 基于搜索的优化方案
