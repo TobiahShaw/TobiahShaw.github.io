@@ -36,7 +36,7 @@ example_digits.shape
 
 ```python
 def plot_digits(data):
-    fig, axes = plt.subplots(10, 10, figsize=(10, 10), 
+    fig, axes = plt.subplots(10, 10, figsize=(10, 10),
                             subplot_kw={'xticks':[], 'yticks':[]},
                             gridspec_kw=dict(hspace=0.1, wspace=0.1))
     for i, ax in enumerate(axes.flat):
