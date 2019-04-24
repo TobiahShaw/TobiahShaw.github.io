@@ -66,9 +66,9 @@ print("Best p =", best_p)
 print("Best score =", best_score)
 ```
 
-    Best k = 3
-    Best p = 4
-    Best score = 0.9860917941585535
+Best k = 3
+Best p = 4
+Best score = 0.9860917941585535
 
 ## 使用交叉验证
 
