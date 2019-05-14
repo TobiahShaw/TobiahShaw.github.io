@@ -12,19 +12,19 @@
 
 # Lp 范数
 
-$left | x right| _p = (\sum_{i=1}^n|x_i|^p)^{\frac{1}{p}}$  称为Lp范数
+$$||x|| _p = (\sum_{i=1}^n|x_i|^p)^{\frac{1}{p}}$$ 称为Lp范数
 
 ## L2 正则项
 
-Ridge中： $\sum_{i=1}^n\theta^2$ 为L2正则项
+Ridge中：$$\sum_{i=1}^n\theta^2$$ 为L2正则项
 
 ## L1 正则项
 
-LASSO中： $\sum_{i=1}^n|\theta|$ 为L1正则项
+LASSO中：$$\sum_{i=1}^n|\theta|$$ 为L1正则项
 
 ## Ln 正则项
 
-$\sum_{i=1}^m|\theta|^n$
+$$\sum_{i=1}^m|\theta|^n$$
 
 ## L0 正则项
 
