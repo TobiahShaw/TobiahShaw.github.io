@@ -1,17 +1,6 @@
-<head>
-    <script src="https://cdn.bootcss.com/mermaid/8.2.4/mermaid.min.js"></script>
-
-    <script>mermaid.initialize({startOnLoad:true});</script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
+<script src="https://cdn.bootcss.com/mermaid/8.2.4/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js"></script>
 
 # 感知机学习规则
 
