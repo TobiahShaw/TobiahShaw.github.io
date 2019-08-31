@@ -57,3 +57,18 @@ $$ W = \begin{bmatrix}
      \vdots\\
      S^{W^T}
 \end{bmatrix} $$
+
+这样就可以将网络输出向量的第 i 个元素写成
+
+$$ a_i = hardlim(n_i) = hardlim(i^{W^T} p + b_i) $$
+
+由于hardlim定义为：
+
+$$ a = hardlim(n) = \left\{
+\begin{aligned}
+1, (n \geq 0) \\
+0, (n < 0)
+\end{aligned}
+\right. $$
+
+所以，如果权值矩阵的第 i 个行向量与输入向量的内积大于等于 -bi，该输出为1，否则该输出为0。因此，**网络中的每个神经元将输入空间划分为两个区域。**
