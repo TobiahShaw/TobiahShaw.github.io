@@ -37,10 +37,36 @@ $$ \lim_{n \to +\infty} a_n = a $$
 
 4. 邻域半径： 点 $ {x_0} $ 的去心 $ \delta $ 邻域, 记作 $ \mathring{U}(x_0, \delta) $ ，这里称 $ \delta $ 为邻域半径。
 
-### 定义
+### 定义一
 
 设函数 $ f(x) $ 在某点 $ {x_0} $ 的某一去心邻域内有定义，如果对于给定任意的正数$ \epsilon $，总存在 $ \delta > 0 $，使得当x满足不等式 $ 0 < |x - x_0| < \delta $ 时，对应的函数值 $ f(x) $ 都满足不等式 $ |f(x) - a| < \epsilon $ , 则称常数 a 是 $ f(x) $ 当 $ x → x_0 $时的极限，记作：
 
 $$ \lim_{x → x_0} f(x) = a $$
 
-#### 注意： $ f(x) $ 在 $ {x_0} $ 处的极限$ \lim_{x → x_0} f(x) $是否存在，与 $ f(x) $ 在 $ {x_0} $ 处是否有定义无关。
+**注意**： $ f(x) $ 在 $ {x_0} $ 处的极限$ \lim_{x → x_0} f(x) $是否存在，与 $ f(x) $ 在 $ {x_0} $ 处是否有定义无关
+
+类似可以定义 $ x → x_0^+ $ 或者 $ x → x_0^- $ 时的单侧极限 $ \lim_{x → x_0^+} f(x) $ 或者 $ \lim_{x → x_0^-} f(x) $
+
+### 定理一
+
+$$ \lim_{x → x_0} f(x) = A \Longleftrightarrow \lim_{x → x_0^+} f(x) = \lim_{x → x_0^-} f(x) = A $$
+
+以下函数要利用左右极限求极限：
+
+1. 分段函数
+2. $ e^\infty $ 型函数，比方说 $ \lim_{x → 1} e^{\frac{1}{x - 1}} $
+3. $ arc tan \infty $ 型函数，比方说 $ \lim_{x → 1} arctan \frac{1}{x - 1} $
+
+### 定义二
+
+设函数 $ f(x) $ 在 |x| 大于某一正数时有定义，如果对于任意给定的 $ \epsilon > 0 $，总存在 X > 0，使得当 x 满足不等式 |x| > X 时，对应的函数值都满足不等式 $ |f(x) - a| < \epsilon $，则称常数 a 是 $ f(x) $ 当 $ x → \infty $时的极限，记作：
+
+$$ \lim_{x → \infty} f(x) = a $$
+
+类似可以定义 $ x → \infty^+ $ 或者 $ x → \infty^- $ 时的单侧极限 $ \lim_{x → \infty^+} f(x) $ 或者 $ \lim_{x → \infty^-} f(x) $
+
+### 定理二
+
+$$ \lim_{x → \infty} f(x) = A \Longleftrightarrow \lim_{x → \infty^+} f(x) = \lim_{x → \infty^-} f(x) = A $$
+
+举例：$ \lim_{x → \infty} e^x $ 没有极限，因为左右极限不相等。
