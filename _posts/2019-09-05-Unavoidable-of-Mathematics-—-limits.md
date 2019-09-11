@@ -99,3 +99,15 @@ $$ \lim \frac{f(x)}{g(x)} = \frac{\lim f(x)}{\lim g(x)} = \frac{A}{B} (B \neq 0)
 （1）进行运算的两个极限必须存在；
 （2）除法运算时做分子的极限不能为0；
 （3）存在 加减 不存在 结论是不存在；
+
+常用技巧：
+
+$$ \lim_{x → \infty} \frac{a_0 x^m + \dots + a_m}{b_0 x^n + \dots + b_n} = \left\{
+\begin{aligned}
+\frac{a_0}{b_0}  (m = n) \\
+0 (m < n) \\
+\infty (m > n)
+\end{aligned}
+\right. $$
+
+处理 $ \frac{0}{0} 或 \frac{\infty}{\infty} $ 应该进行代换，把 0 或 无穷代换掉， 处理 $ 0*\infty 或 \infty - \infty $ 应转化为 $ \frac{0}{0} 或 \frac{\infty}{\infty} $ 问题，在进行求解。
