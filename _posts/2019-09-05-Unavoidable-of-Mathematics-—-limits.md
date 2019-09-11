@@ -111,3 +111,9 @@ $$ \lim_{x → \infty} \frac{a_0 x^m + \dots + a_m}{b_0 x^n + \dots + b_n} = \le
 \right. $$
 
 处理 $ \frac{0}{0} 或 \frac{\infty}{\infty} $ 应该进行代换，把 0 或 无穷代换掉， 处理 $ 0*\infty 或 \infty - \infty $ 应转化为 $ \frac{0}{0} 或 \frac{\infty}{\infty} $ 问题，在进行求解。
+
+## 定理二（复合函数极限运算法则）
+
+设 $ y = f[g(x)] $ 是由 $ y = f(u) $ 与 $ u = g(x) $ 复合而成 $ y = f[g(x)] $ 在点 $ x_0 $ 的某去心邻域内有定义，若 $ \lim_{x → x_0} g(x) = u_0 $ ，而 $ y = f(u) $ 在 $ u = u_0 $ 处连续则：
+
+$$ \lim_{x → x_0} f[g(x)] = f[\lim_{x → x_0} g(x)] = f(u_0) $$
