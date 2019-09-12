@@ -137,3 +137,9 @@ $$ \lim_{n → \infty} x_n = \lim_{n → \infty} z_n = a $$
 若数列 $ \{x_n\} $ 单调增加，且有上界，则极限 $ \lim_{n → \infty} x_n $ 存在；
 
 若数列 $ \{x_n\} $ 单调减少，且有下界，则极限 $ \lim_{n → \infty} x_n $ 存在；
+
+### 两个重要极限
+
+$$ \lim_{x → 0} \frac{sin x}{x} = 1 $$
+
+$$ \lim_{x → \infty} (1 + \frac{1}{x})^x = \lim_{x → 0} (1 + x)^{\frac{1}{x}} = e $$
