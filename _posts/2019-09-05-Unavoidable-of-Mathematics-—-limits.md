@@ -117,3 +117,23 @@ $$ \lim_{x → \infty} \frac{a_0 x^m + \dots + a_m}{b_0 x^n + \dots + b_n} = \le
 设 $ y = f[g(x)] $ 是由 $ y = f(u) $ 与 $ u = g(x) $ 复合而成 $ y = f[g(x)] $ 在点 $ x_0 $ 的某去心邻域内有定义，若 $ \lim_{x → x_0} g(x) = u_0 $ ，而 $ y = f(u) $ 在 $ u = u_0 $ 处连续则：
 
 $$ \lim_{x → x_0} f[g(x)] = f[\lim_{x → x_0} g(x)] = f(u_0) $$
+
+## 极限存在准则
+
+### 夹逼准则
+
+如果数列 $ \{x_n\}, \{y_n\}, \{z_n\} $ 满足以下条件：
+
+$$ \exist N > 0, 如果n > N, 则x_n \leq y_n \leq z_n $$
+
+$$ \lim_{n → \infty} x_n = \lim_{n → \infty} z_n = a $$
+
+则数列 $ \{y_n\} $ 有极限，且 $ \lim_{n → \infty} y_n = a $
+
+**注意：** 函数对应有以上夹逼准则。
+
+### 单调有界准则
+
+若数列 $ \{x_n\} $ 单调增加，且有上界，则极限 $ \lim_{n → \infty} x_n $ 存在；
+
+若数列 $ \{x_n\} $ 单调减少，且有下界，则极限 $ \lim_{n → \infty} x_n $ 存在；
