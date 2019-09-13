@@ -143,3 +143,13 @@ $$ \lim_{n → \infty} x_n = \lim_{n → \infty} z_n = a $$
 $$ \lim_{x → 0} \frac{sin x}{x} = 1 $$
 
 $$ \lim_{x → \infty} (1 + \frac{1}{x})^x = \lim_{x → 0} (1 + x)^{\frac{1}{x}} = e $$
+
+#### 如何利用两个重要极限
+
+$$ x → 0时, \phi(x) → 0, \lim_{x → 0} \frac{sin \phi(x)}{\phi(x)} = 1 $$
+
+$$ x → 0时, \phi(x) → 0, \lim_{x → 0} (1 + \phi(x))^{\frac{1}{\phi(x)}} = e $$
+
+#### 如何利用极限存在准则
+
+一般要结合幂指数极限运算发着，或者函数本身性质（如，常用不等式）
