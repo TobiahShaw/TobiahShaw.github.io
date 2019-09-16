@@ -36,6 +36,12 @@ $$ \lim_{x → x_0 (x → \infty)} f(x) = A \Longleftrightarrow f(x) = A + \alph
 
 （5）若 $ \lim \frac{\beta}{\alpha} = 1 $ ，则称 $ \beta $ 是 $ \alpha $ 的等价无穷小；
 
+#### 等价无穷小的性质
+
+（1）自反性 a ~ a；
+（2）对称性 若 a ~ b，则 b ~ a；
+（3）传递性 若 a ~ b，b ~ c，则 a ~ c；
+
 ## 无穷大
 
 ### 定义二
