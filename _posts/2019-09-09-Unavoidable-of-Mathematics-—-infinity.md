@@ -20,6 +20,22 @@ $$ \lim_{x → x_0 (x → \infty)} f(x) = A \Longleftrightarrow f(x) = A + \alph
 
 （3）有限个无穷小的积认识无穷小。
 
+### 无穷小的比较
+
+#### 高阶、低阶、同阶及等价的概念
+
+设 $ \lim \alpha = 0, \lim \beta = 0, \alpha \neq 0 $
+
+（1）若 $ \lim \frac{\beta}{\alpha} = 0 $ ，则称 $ \beta $ 是比 $ \alpha $ 的高阶无穷小，记作 $ \beta = o(\alpha) $；
+
+（2）若 $ \lim \frac{\beta}{\alpha} = \infty $ ，则称 $ \beta $ 是比 $ \alpha $ 的低阶无穷小；
+
+（3）若 $ \lim \frac{\beta}{\alpha} = c \neq 0 $ ，则称 $ \beta $ 是 $ \alpha $ 的同阶无穷小；
+
+（4）若 $ \lim \frac{\beta}{\alpha^k} = c \neq 0 $ ，则称 $ \beta $ 是 $ \alpha $ 的k阶无穷小；
+
+（5）若 $ \lim \frac{\beta}{\alpha} = 1 $ ，则称 $ \beta $ 是 $ \alpha $ 的等价无穷小；
+
 ## 无穷大
 
 ### 定义二
