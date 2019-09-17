@@ -42,6 +42,22 @@ $$ \lim_{x → x_0 (x → \infty)} f(x) = A \Longleftrightarrow f(x) = A + \alph
 （2）对称性 若 a ~ b，则 b ~ a；
 （3）传递性 若 a ~ b，b ~ c，则 a ~ c；
 
+#### 无穷小有关的基本定理
+
+定理一：
+
+$$ \beta \sim \alpha \Leftrightarrow \alpha + o(\alpha) $$
+
+定理二：
+
+$$ 若 \alpha \sim \alpha_1, \beta \sim \beta_1, 则 \lim \frac{\beta}{\alpha} = \lim \frac{\beta_1}{\alpha_1} $$
+
+**注：** 仅可在乘除法中使用，常用等价无穷小：
+
+$$ x → 0时,sin x \sim arcsin x \sim tan x \sim arctan x \sim ln(1+x) \sim e^x -1 \sim x;\\ 1 - cos x \sim \frac{1}{2}x^2;\\ (1 + \alpha x)^\beta - 1 \sim \alpha \beta x;\\ \alpha^x - 1 \sim x ln \alpha $$
+
+**注2：** 等价无穷小替换在求极限中常用，仅限乘除法。在满足整体乘除关系时可先算出其中一部分的极限再进行乘除。
+
 ## 无穷大
 
 ### 定义二
