@@ -29,3 +29,19 @@
 网络的运行一般分为训练和工作两个阶段。训练阶段是为了从训练数据中提取隐含的知识和规律，并储存于网络中供工作中使用。
 
 神经元的学习见[2019-08-28-Learning-rule-of-Prceptor.md](/blog/Learning-rule-of-Prceptor)
+
+## 常见学习规则
+
+### Hebb 学习规则
+
+### Perceptron 学习规则
+
+### $\delta$ 学习规则
+
+### LMS 学习规则
+
+### Correlation 学习规则
+
+### Winner-Take-All 学习规则
+
+### Outstar 学习规则
