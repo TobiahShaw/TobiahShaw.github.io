@@ -115,6 +115,20 @@ $$ \Delta w_{ij} = \eta(d_j - o_j)f'(net_j)x_i \quad (i = 0, 1, \dots, n) $$
 
 ### LMS 学习规则
 
+1962 年由 Bernard Widrow 和 Marcian Hoff 提出，因为他能使神经元实际输出与期望输出之间的平方差最小，所以称为最小均方规则（LMS）。其学习信号为：
+
+$$ r = d_j - W_j^T X $$
+
+权值调整向量为：
+
+$$ \Delta W_j = \eta(d_j - W_j^T X) X $$
+
+$ \Delta W_j $ 的各个分量为：
+
+$$ \Delta w_{ij} = \eta(d_j - W_j^T X) x_i \quad (i = 0, 1, \dots, n) $$
+
+实际上，LMS规则可以看成是 $ \delta $ 学习规则的一个特殊情况。该学习规则与神经元采用的激活函数无关，因此不需要对激活函数求导，不仅学习速度较快，而且具有较高的精度。权值可初始化为任意值。
+
 ### Correlation 学习规则
 
 ### Winner-Take-All 学习规则
