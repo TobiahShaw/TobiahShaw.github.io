@@ -131,6 +131,20 @@ $$ \Delta w_{ij} = \eta(d_j - W_j^T X) x_i \quad (i = 0, 1, \dots, n) $$
 
 ### Correlation 学习规则
 
+Correlation（相关）学习规则规定学习信号为：
+
+$$ r = d_j $$
+
+易得出 $ \Delta W_j $ 以及 $ \Delta w_{ij} $ 分别为：
+
+$$ \Delta W_j = \eta d_j X $$
+
+$$ \Delta w_{ij} = \eta d_j x_i \quad (i = 0, 1, \dots, n) $$
+
+该规则表明，当 $ d_j $ 是 $ x_i $ 的期望输出时，相应的权值增加量 $ \Delta w_{ij} $ 与二者的乘积 $ d_j x_i $ 成正比。
+
+如果 Hebb 学习规则中的激活函数为二进制函数，且有 $ o_j = d_j $ ，则Correlation（相关）学习规则可以看作 Hebb 规则的一种特殊情况。应当注意的是，Hebb 学习规则是无监督学习，而 Correlation（相关）学习是有监督学习。这种学习规则要求权值初始化为零。
+
 ### Winner-Take-All 学习规则
 
 ### Outstar 学习规则
