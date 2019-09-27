@@ -31,3 +31,9 @@ $$ f'(x_0) = A \Leftrightarrow f_+'(x_0) = f_-'(x_0) = A $$
 ### 定义三
 
 如果函数 f(x) 在区间 I 上每一点都可导（端点是指单侧可导），则称 f(x) 在区间 I 上可导，此时 f'(x) 依然是个函数，叫做原来函数 f(x) 的导函数。
+
+## 求导法则
+
+### 常数和基本初等函数的导数公式
+
+$$ (C)' = 0 \\ (x^\mu)' = \mu x^{\mu - 1} \\ (sin x)' = cos x \\ (cos x)' = -sin x \\ (tan x)' = sec^2 x \\ (cot x)' = -csc^2 x \\ (sec x)' = sec \  xtgx \\ (csc x)' = -csc \ xctgx \\ (a^x)' = a^x ln a \\ (e^x)' = e^x \\ (log_a x)' = \frac{1}{x ln a} \\ (ln x)' = \frac{1}{x} \\ (arcsin \  x)' = \frac{1}{\sqrt{1 - x^2}} \\ (arccos \  x)' = -\frac{1}{\sqrt{1 - x^2}} \\ (arctan \  x)' = \frac{1}{1 - x^2} \\ (arccot \  x)' = -\frac{1}{1 - x^2} $$
