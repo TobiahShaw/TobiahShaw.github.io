@@ -59,3 +59,7 @@ $$ y = f(x) → y_x' = tan \alpha \\ x = \phi(y) → x_y' = tan \beta $$
 因为二者互为反函数，则：
 
 $$ \alpha + \beta = \frac{\pi}{2} \\ 则：y_x' = \frac{1}{x_y'} \\ 即：x_y' = \frac{1}{y_x'} $$
+
+### 复合函数求导
+
+设 $ y = f(u), u = f(x) $ 都可导，则复合函数 $ y = f[g(x)] $ 也可导，且 $ \frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} $ ，即 $ y' = f'(u) g'(x) = f'[g(x)] g'(x) $
