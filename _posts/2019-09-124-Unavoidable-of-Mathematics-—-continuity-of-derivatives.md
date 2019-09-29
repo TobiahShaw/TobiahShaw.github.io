@@ -43,3 +43,19 @@ $$ (C)' = 0 \\ (x^\mu)' = \mu x^{\mu - 1} \\ (sin x)' = cos x \\ (cos x)' = -sin
 设 u、v 均可导，则：
 
 $$ (u \pm v)' = u' \pm v' \\ (uv)' = u'v + uv' \\ (\frac{u}{v})' = \frac{u'v - uv'}{v^2} $$
+
+### 反函数求导法则
+
+设 $ y = f(x) $ 再某区间单调可导且 $ f'(x) \neq 0 $，则其反函数 $ x = \phi(y) $（**注意反函数的形式**）在对应区间也可导，且
+
+$$ \frac{dx}{dy} = \frac{1}{\frac{dy}{dx}} 即 \phi'(y) = \frac{1}{f'(x)} $$
+
+#### 推导
+
+由于我们可以理解导数为切线斜率：
+
+$$ y = f(x) → y_x' = tan \alpha \\ x = \phi(y) → x_y' = tan \beta $$
+
+因为二者互为反函数，则：
+
+$$ \alpha + \beta = \frac{\pi}{2} \\ 则：y_x' = \frac{1}{x_y'} \\ 即：x_y' = \frac{1}{y_x'} $$
