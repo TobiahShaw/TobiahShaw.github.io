@@ -233,7 +233,64 @@ $$ \Delta w_{jk} = -\eta \frac{\partial E}{\partial w_{jk}} \quad j=0,1,2,\dots,
 
 $$ \Delta v_{ij} = -\eta \frac{\partial E}{\partial v_{ij}} \quad i=0,1,2,\dots,n;j=1,2,\dots,m $$
 
-式中，符号表示梯度下降，常数 $ \eta \in (0, 1) $ 表示比例系数，在训练中反映了学习率。可以看出，BP算法属于  学习规则类，这类算法常被称为误差的梯度下降算法。
+式中，符号表示梯度下降，常数 $ \eta \in (0, 1) $ 表示比例系数，在训练中反映了学习率。可以看出，BP算法属于 $ \delta $ 学习规则类，这类算法常被称为误差的梯度下降算法。
+
+#### BP算法的推导
+
+上述两式，进士对权值调整思路的数学表达，而不是具体权值调整计算式。下面我们推导三层 BP 算法权值调整计算式。事先约定，在全部推导过程中，对输出层均有 $ j = 0,1,2,\dots,m; k = 1,2,\dots,l $ ；对隐层均有 $ i = 0,1,2,\dots,n; j = 1,2,\dots,m $ 。
+
+对于输出层：
+
+$$ \Delta w_{jk} = -\eta \frac{\partial E}{\partial w_{jk}} = -\eta \frac{\partial E}{\partial net_k} \frac{\partial net_k}{\partial w_{jk}} $$
+
+对于隐层：
+
+$$ \Delta v_{ij} = -\eta \frac{\partial E}{\partial v_{ij}} = -\eta \frac{\partial E}{\partial net_j} \frac{\partial net_j}{\partial v_{ij}} $$
+
+对输入层和隐层各定义一个误差信号，令：
+
+$$ \delta_k^o = - \frac{\partial E}{\partial net_k} $$
+
+$$ \delta_j^y = - \frac{\partial E}{\partial net_j} $$
+
+综合上述式子：
+
+$$ \Delta w_{jk} = \eta \delta_k^o y_j $$
+
+$$ \Delta v_{ij} = \eta \delta_j^y x_i $$
+
+乐意看出，只要计算出误差信号，权值调整量的计算推导即可完成。
+
+继续推导如何求误差信号：
+
+对于输出层， $ \delta_k^o $ 可展开为：
+
+$$ \delta_k^o = -\frac{\partial E}{\partial net_k} = -\frac{\partial E}{\partial o_k} \frac{\partial o_k}{\partial net_k} = -\frac{\partial E}{\partial o_k}f'(net_k) $$
+
+对于隐层，  可展开为：
+
+$$ \delta_j^y = - \frac{\partial E}{\partial net_j} = -\frac{\partial E}{\partial y_j} \frac{\partial y_j}{\partial net_j} = -\frac{\partial E}{\partial y_j}f'(net_j) $$
+
+下面求上式中网络误差对各层输出的偏导。
+
+对于输出层，利用误差定义可得：
+
+$$ \frac{\partial E}{\partial o_k} = -(d_k - o_k) $$
+
+对于隐层，利用误差在隐层的展开式可得：
+
+$$ \frac{\partial E}{\partial y_j} = - \sum_{k=1}^l (d_k - o_k)f'(net_k)w_{jk} $$
+
+将上述结果带入 $ \delta_k^o, \delta_j^y $ ，并利用激活函数 $ f'(x) = f(x) [1-f(x)] $ 的性质可得：
+
+至此，两个误差信号的推导已完成，得到三层感知机的 BP 学习算法权值调整公式为：
+
+$$ \left\{
+\begin{aligned}
+\Delta w_{jk} = \eta \delta_k^o y_j = \eta(d_k - o_k) o_k (1 - o_k) y_i \\
+\Delta v_{ij} = \eta \delta_j^y x_i = \eta (\sum_{k=1}^l \delta_k^o w_{jk}) y_j (1 - y_j) x_i
+\end{aligned}
+\right. $$
 
 ## BP算法改进
 
