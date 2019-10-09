@@ -292,6 +292,32 @@ $$ \left\{
 \end{aligned}
 \right. $$
 
+对于多层感知机，设共有 h 个隐层，按前向顺序各隐层节点数分别记为 $ m_1,m_2,\dots,m_h $ ，各隐层输出分别记为 $ y^1,y^2,\dots,y^h $ ，各隐层权值矩阵分别记为 $ W^1,W^2,\dots,W^h,W^{h+1} $ ，则各层权值调整公式为：
+
+输出层：
+
+$$ \Delta w_{jk}^{h+1} = \eta \delta_k^{h+1} y_j^h = \eta(d_k - o_k) o_k (1-o_k)y_j^h \quad j=0,1,2,\dots,m_h;k=1,2,\dots,l $$
+
+第 h 隐层：
+
+$$ \Delta w_{ij}^h = \eta \delta_j^h y^{h-1} = \eta (\sum_{k=1}^l \delta_k^o w_{jk}^{h+1}) y_j^h (1 - y_j^h) y_j^{h-1} \quad i=0,1,2,\dots,m_{h-1};j=1,2,\dots,m_h $$
+
+按以上规律逐层类推，则第一隐层权值调整计算公式：
+
+$$ \Delta w_{pq}^1 = \eta \delta_q^1 y^1 = \eta (\sum_{r=1}^{m_2} \delta_r^2 w_{qr}^2) y_q^1 (1 - y_q^1) x_p \quad p=0,1,2,\dots,n;q=1,2,\dots,m_1 $$
+
+三层感知机的 BP 学习算法也可以写成向量形式。
+
+对于输出层，设 $ Y=(y_0,y_1,dots,y_m)^T, \delta^o=(\delta_1^o,\delta_2^o,dots,\delta_k^o,\dots,\delta_l^o)^T $ ，则：
+
+$$ \Delta W = \eta (\delta^o Y^T)^T $$
+
+对于隐层，设 $ X=(x_0,x_1,dots,x_i,\dots,x_n)^T, \delta^y=(\delta_1^y,\delta_2^y,dots,\delta_j^y,\dots,\delta_m^y)^T $ ，则：
+
+$$ \Delta V = \eta (\delta^y X^T)^T $$
+
+容易看出，BP学习算法中，各层权值调整公式形式上都是一样的，均有3个因素决定，即：学习率 $ \eta $ 、本层输出的误差信号 $ \delta $ 以及本层输入信号 $ Y(或X) $ 。其中输出层误差信号与网络的期望输出和实际输出之差有关，直接反映了误差，而各隐层的误差信号与前面各层误差信号都有关，是从输出层开始逐层反传过来的。
+
 ## BP算法改进
 
 ## BP网络设计
