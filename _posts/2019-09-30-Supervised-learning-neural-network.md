@@ -501,7 +501,7 @@ $$ m = \sqrt{n + l} + a \\ m = log_2 n \\ m = \sqrt{nl} $$
 
 试凑法的另一种做法是先设置较多的隐节点，进行训练时采用下面的误差函数：
 
-$$ E_f = E_总 + \epsilon \sum_{h,j,i} \vert w_{ij}^h \vert h = 1,2;j=1,2,\dots,m;i = 1,2,\dots,n $$
+$$ E_f = E_总 + \epsilon \sum_{h,j,i} \vert w_{ij}^h \vert \quad \quad h = 1,2;j=1,2,\dots,m;i = 1,2,\dots,n $$
 
 式中， $ E_总 $ 为网络输出误差的平方和，对于单隐层 BP 网，第二项中的 n 代表输入节点数； m 为隐层节点数，其作用相当于引入一个遗忘项，其目的是为了使训练后的连接权值尽可能的小。因此求 $ E_f $ 对 $ w_{ij}^h $ 的偏导为：
 
