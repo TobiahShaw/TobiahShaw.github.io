@@ -432,4 +432,61 @@ $ F_1 $ 场的 M 个神经元从外界接受输入模式 $ X $ ，经场内的�
 
 #### 网络的数学模型和学习算法
 
+（1）特征表示场 $ F_1 $ 的数学模型
+
+特征表示场 $ F_1 $ 由三层神经元构成，底层接受来自外界的输入，顶层接受来自 $ F_2 $ 的外星反馈输入，在中间层对这两种输入进行相应的转换、比较并保存结果，将输出返回顶层节点及底层节点。输入模式 $ X $ 是一个 M 维模拟向量，表示为:
+
+$$ X=(x_1,x_2,\dots,x_m) $$
+
+在 $ F_1 $ 中有相应的M个处理单元，每个单元都包括上、中、下三层，每层都包含有由神经生理学导出的两种不同功能的神经元：一种用空心圆表示；另一种用实心圆表示。它们的功能分别为：空心圆神经元有两种输入激励，完成的功能是比较其两种不同的输入，兴奋激励和抑制激励。实心圆神经元完成的功能是求输入向量的模。
+
+在上面一张图中，$ F_1 $ 的底层和中层构成一个闭合的正反馈回路，其中标记为 $ z_i $ 的神经元接受输入信号 $ x_i $ ，而标记为 $ v_i $ 的神经元接受上层送来的信号 $ bf(s_i) $ 。这个回路中还包括两次规格化运算和一次非线性变换，其中底层输入方程和规格化运算为：
+
+$$  r_j = \left\{
+\begin{aligned}
+z_i = x_i + au_i \\
+u_i = z_i / (e +  \vert \vert Z \vert \vert)
+\end{aligned}
+\right. \tag 8 $$
+
+式中， $ e $ 为很小的正实数，相对于 $ \vert \vert Z \vert \vert $ 可以忽略不计。
+
+中层输入方程和规格化运算为：
+
+$$  r_j = \left\{
+\begin{aligned}
+v_i = f(q_i) + bf(s_i) \\
+u_i = v_i / (e +  \vert \vert V \vert \vert)
+\end{aligned}
+\right. \tag 9 $$
+
+式中， $ e $ 为很小的正实数，相对于 $ \vert \vert V \vert \vert $ 可以忽略不计。
+
+从式（8）和式（9）可以看出，输入模式 $ X $ 经历了去噪和归一化处理后成为 $ U $ ，其过程为： $ x \stackrel{+au}{\longrightarrow} z \stackrel{/(e +  \vert \vert Z \vert \vert)}{\longrightarrow} q \stackrel{f}{\longrightarrow} f(q) \stackrel{bf(s)}{\longrightarrow} v \stackrel{/(e +  \vert \vert V \vert \vert)}{\longrightarrow} u $ 。
+
+底层至中层和中层至上层之间的非线性激活函数  可以采用如下形式：
+
+$$ f(x) = \left\{
+\begin{aligned}
+0,0 \leq x < \theta \\
+x, x > \theta
+\end{aligned}
+\right. $$
+
+式中， $ \theta $ 由实验而定。
+
+$ F_1 $ 的中层和上层也构成一个闭合正反馈回路，其中标记为 $ p_i $ 的神经元接受来自中层的信号 $ u_i $ 和来自 $ F_2 $ 场的信号，这个回路包括的运算是：
+
+$$ p_i = u_i + \sum_{j=M+1}^N g(y_i)z_{ji} \tag{10} $$
+
+$$ s_i = \frac{p_i}{e + \vert \vert P \vert \vert} \tag{11} $$
+
+式（10）中第二项是 $ F_2 $ 场对神经元 $ p_i $ 的输入， $ z_{ji} $ 是自上而下的 LTM 系数。式（11）中 $ e $ 为很小的实数，相对于 $ \vert \vert P \vert \vert $ 可以忽略不计。
+
+（2）类别表示场 $ F_2 $ 的数学模型
+
+（3）权值调整规则——LTM方程
+
+（4）取向子系统
+
 ### ART Ⅱ 型网络的应用
