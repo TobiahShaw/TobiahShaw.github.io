@@ -515,6 +515,32 @@ u_i, j \neq j'
 
 （3）权值调整规则——LTM方程
 
+对长期记忆 LTM 权值的调整，按一下两个 LTM 方程进行。自上而下 $ (F_1 \rightarrow F_2) $  LTM 方程为：
+
+$$ \frac{dz_{ji}}{dt} = g(y_i)(p_j-z_{ji}) $$
+
+自下而上 $ (F_2 \rightarrow F_1) $  LTM方程为：
+
+$$ \frac{dz_{ij}}{dt} = g(y_i)(p_j-z_{ij}) $$
+
+当 $ F_2 $ 确定选择 $ j' $ 节点后，对于 $ j \neq j' $ ，有：
+
+$$ \frac{dz_{ji}}{dt} = 0 \quad \frac{dz_{ij}}{dt} = 0 $$
+
+当 $ j = j' $ 时，有：
+
+$$ \frac{dz_{j'i}}{dt} = d(p_i - z_{j'i}) = d(1-d)(\frac{u_i}{1-d} - z_{j'i}) $$
+
+$$ \frac{dz_{ij'}}{dt} = d(p_i - z_{ij'}) = d(1-d)(\frac{u_i}{1-d} - z_{ij'}) $$
+
+初始化时，可取 $ z_{ji}=0,z_{ij} = \frac{1}{(1-d)\sqrt M}, i=1,2,\dots,M; j=M+1,M+2,\dots,M+N, d=0.9 $ 。
+
+权值调整公式也可写成以下形式：
+
+$$ z_{ij'}(k+1) = z_{ij'}(k) + d(1-d)(\frac{u_i(k)}{1-d} - z_{ij'}(k)) $$
+
+$$ z_{j'i}(k+1) = z_{j'i}(k) + d(1-d)(\frac{u_i(k)}{1-d} - z_{j'i}(k)) $$
+
 （4）取向子系统
 
 ### ART Ⅱ 型网络的应用
