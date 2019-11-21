@@ -543,4 +543,10 @@ $$ z_{j'i}(k+1) = z_{j'i}(k) + d(1-d)(\frac{u_i(k)}{1-d} - z_{j'i}(k)) $$
 
 （4）取向子系统
 
+上面一张图左侧为取向子系统，其功能是根据 $ F_1 $ 的短期记忆模式与被动激活节点的长期记忆模式之间的匹配度决定 $ F_2 $ 的重置。其匹配度定义为：
+
+$$ r_i = \frac{u_i + cp_i}{e + \vert \vert U \vert \vert + \vert \vert cR \vert \vert} $$
+
+式中， $ e $ 可忽略。图中实心圆 A 的输出为相似度的模，用 $ \vert \vert R \vert \vert $ 表示。设警戒门限为 $ \rho $ ， $ 0 < \rho < 1 $ 当 $ \vert \vert R \vert \vert > \rho $ 时，选中该类，否则取向子系统需对 $ F_2 $ 重置。
+
 ### ART Ⅱ 型网络的应用
