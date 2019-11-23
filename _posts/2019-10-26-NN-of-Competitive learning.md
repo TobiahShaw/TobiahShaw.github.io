@@ -550,3 +550,9 @@ $$ r_i = \frac{u_i + cp_i}{e + \vert \vert U \vert \vert + \vert \vert cR \vert 
 式中， $ e $ 可忽略。图中实心圆 A 的输出为相似度的模，用 $ \vert \vert R \vert \vert $ 表示。设警戒门限为 $ \rho $ ， $ 0 < \rho < 1 $ 当 $ \vert \vert R \vert \vert > \rho $ 时，选中该类，否则取向子系统需对 $ F_2 $ 重置。
 
 ### ART Ⅱ 型网络的应用
+
+- 应用于识别系统
+
+- 应用于声波探伤
+
+- 应用于企业综合经济效益评估
