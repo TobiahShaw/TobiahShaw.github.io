@@ -556,3 +556,11 @@ $$ r_i = \frac{u_i + cp_i}{e + \vert \vert U \vert \vert + \vert \vert cR \vert 
 - 应用于声波探伤
 
 - 应用于企业综合经济效益评估
+
+## 总结
+
+### 竞争学习策略
+
+### SOM 神经网络
+
+### ART 神经网络
