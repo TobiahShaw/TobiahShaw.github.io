@@ -18,7 +18,7 @@ class HelloWorld {
 
 当上面`HelloWorld.java`文件被JVM加载到内存，会发生：
 
-![图0.1](../assets/img/20200418/0-1.png)
+<img src="../assets/img/20200418/0-1.png" alt="图0.1" width="100%" />
 
 1. HelloWorld.java 文件首先需要经过编译器编译，生成 HelloWorld.class 字节码文件。
 2. Java 程序中访问HelloWorld这个类时，需要通过 ClassLoader(类加载器)将HelloWorld.class 加载到 JVM 的内存中。
@@ -135,4 +135,4 @@ Java 堆（heap）是 JVM 管理的最大的一片内存区域，该区域的唯
 
 总结来说，JVM 的运行时内存结构中一共有两个“栈”和一个“堆”，分别是：Java 虚拟机栈和本地方法栈，以及“GC堆”和方法区。除此之外还有一个程序计数器，但是我们开发者几乎不会用到这一部分，所以并不是重点学习内容。 JVM 内存中只有堆和方法区是线程共享的数据区域，其它区域都是线程私有的。并且程序计数器是唯一一个在 Java 虚拟机规范中没有规定任何 OutOfMemoryError 情况的区域。
 
-![图0.1](../assets/img/20200418/3.png)
+<img src="../assets/img/20200418/3.png" alt="图3.1" width="100%" />
