@@ -1,6 +1,6 @@
 # 运行时内存分配问题
 
-**本文为学习笔记，学习内容为姜新星在拉钩上的[Android工程师进阶课程](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=67)，如果版权争议请联系我（issue）**
+**本文为学习笔记，如果版权争议请联系我（issue）**
 
 ## 1 内存模型
 
