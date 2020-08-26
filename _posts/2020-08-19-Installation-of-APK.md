@@ -1,6 +1,7 @@
 # 应用安装  
 
 1. PackageInstallerActivity -> PackageInstallerSession#commitLocked -> PMS
+
 2. PMS#installStage正式安装：
    1. copy安装包
       1. PMS#installStage：
