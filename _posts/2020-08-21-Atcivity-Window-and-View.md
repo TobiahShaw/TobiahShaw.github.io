@@ -1,3 +1,8 @@
+---
+layout: post
+title: Activity Window and View
+---
+
 # Activity Window and View
 
 1. View展示
