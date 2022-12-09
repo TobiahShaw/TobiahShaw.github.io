@@ -1,3 +1,8 @@
+---
+layout: post
+title: How to test the performance of algorithm
+tag: ML
+---
 
 # 测试算法效率
 
@@ -28,13 +33,17 @@ y = iris.target
 X.shape
 ```
 
+```terminal
 (150, 4)
+```
 
 ```python
 y.shape
 ```
 
+```terminal
 (150,)
+```
 
 ## 实现 train test split 算法
 
@@ -61,7 +70,9 @@ test_size = int(len(X) * test_ratio)
 test_size
 ```
 
+```terminal
 30
+```
 
 - 生成训练集和测试集的索引
 
@@ -91,8 +102,10 @@ print(X_train.shape)
 print(y_train.shape)
 ```
 
+```terminal
 (120, 4)
 (120,)
+```
 
 查看一下测试集样本和标签的大小
 
@@ -101,8 +114,10 @@ print(X_test.shape)
 print(y_test.shape)
 ```
 
+```terminal
 (30, 4)
 (30,)
+```
 
 ## 封装算法
 
@@ -139,10 +154,12 @@ print(X_test.shape)
 print(y_test.shape)
 ```
 
+```terminal
 (120, 4)
 (120,)
 (30, 4)
 (30,)
+```
 
 ## 将结果用于上一节 kNN 算法
 
@@ -151,7 +168,9 @@ my_kNN_classifier = kNNClassifier(3)
 my_kNN_classifier.fit(X_train=X_train, y_train=y_train)
 ```
 
+```terminal
 kNN(k=3)
+```
 
 ```python
 y_predict = my_kNN_classifier.predict(X_predict=X_test)
@@ -159,15 +178,19 @@ y_predict = my_kNN_classifier.predict(X_predict=X_test)
 y_predict
 ```
 
+```terminal
 array([2, 0, 0, 1, 0, 0, 0, 2, 1, 1, 0, 0, 0, 2, 1, 0, 0, 2, 0, 1, 2, 1,
            0, 1, 2, 0, 0, 2, 1, 2])
+```
 
 ```python
 y_test
 ```
 
+```terminal
 array([2, 0, 0, 1, 0, 0, 0, 2, 1, 1, 0, 0, 0, 2, 1, 0, 0, 2, 0, 1, 2, 2,
            0, 1, 2, 0, 0, 2, 1, 2])
+```
 
 通过计算正确预测的比例来衡量效率
 
@@ -177,7 +200,9 @@ accuracy = sum(y_predict == y_test) / len(y_test)
 accuracy
 ```
 
+```terminal
 0.9666666666666667
+```
 
 ## sklearn 中的 train_test_split
 
@@ -193,7 +218,9 @@ print(X_test.shape)
 print(y_test.shape)
 ```
 
+```terminal
 (120, 4)
 (120,)
 (30, 4)
 (30,)
+```
