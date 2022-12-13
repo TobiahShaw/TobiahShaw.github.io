@@ -1,3 +1,8 @@
+---
+layout: post
+title: The Hyper-parameter of Grid-Search
+tag: ML
+---
 
 # 超参数
 
@@ -49,7 +54,9 @@ sk_kNN_clf.fit(X_train, y_train)
 sk_kNN_clf.score(X_test, y_test)
 ```
 
+```terminal
 0.9916666666666667
+```
 
 ## 网格搜索
 
@@ -95,6 +102,7 @@ grid_search = GridSearchCV(knn_clf, param_grid)
 grid_search.fit(X_train, y_train)
 ```
 
+``` terminal
 Wall time: 2min 51s
 
 GridSearchCV(cv=None, error_score='raise',
@@ -105,6 +113,7 @@ GridSearchCV(cv=None, error_score='raise',
        param_grid=[{'weights': ['uniform'], 'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, {'weights': ['distance'], 'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'p': [1, 2, 3, 4, 5]}],
        pre_dispatch='2*n_jobs', refit=True, return_train_score='warn',
        scoring=None, verbose=0)
+```
 
 ### 获得最好的模型
 
@@ -112,9 +121,11 @@ GridSearchCV(cv=None, error_score='raise',
 grid_search.best_estimator_
 ```
 
+```terminal
 KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
                metric_params=None, n_jobs=1, n_neighbors=3, p=3,
                weights='distance')
+```
 
 ### 最好的模型的score（CV - 交叉验证）
 
@@ -122,7 +133,9 @@ KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
 grid_search.best_score_
 ```
 
+```terminal
 0.9853862212943633
+```
 
 ### 最好的超参数
 
@@ -130,15 +143,18 @@ grid_search.best_score_
 grid_search.best_params_
 ```
 
+```terminal
 {'n_neighbors': 3, 'p': 3, 'weights': 'distance'}
+```
 
 ```python
 knn_clf = grid_search.best_estimator_
 knn_clf.score(X_test, y_test)
 ```
 
+```terminal
 0.9833333333333333
-
+```
 ### 多核操作
 
 可以通过n_jobs来定义参与运算的核心数，-1 代表全部核心
@@ -152,6 +168,7 @@ grid_search = GridSearchCV(knn_clf, param_grid, n_jobs=2, verbose=3)
 grid_search.fit(X_train, y_train)
 ```
 
+```terminal
 Fitting 3 folds for each of 60 candidates, totalling 180 fits
 
 [Parallel(n_jobs=2)]: Done  28 tasks      | elapsed:   27.6s
@@ -170,3 +187,4 @@ GridSearchCV(cv=None, error_score='raise',
        param_grid=[{'weights': ['uniform'], 'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, {'weights': ['distance'], 'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'p': [1, 2, 3, 4, 5]}],
        pre_dispatch='2*n_jobs', refit=True, return_train_score='warn',
        scoring=None, verbose=3)
+```
