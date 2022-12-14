@@ -1,3 +1,9 @@
+---
+layout: post
+title: The Hyper-parameters and Model-parameters
+tag: ML
+---
+
 # 超参数和模型参数
 
 上个小节我们讲了网格搜索和超参数，这一节我们就研究一下看kNN具体的超参数的意义。
@@ -5,7 +11,6 @@
 同时在这一节中我们不适用网格搜索，来感受一下网格搜索内部到底做了什么。
 
 - 超参数：在算法运行前需要决定的参数
-
 - 模型参数：算法过程中学习的参数
 
 kNN算法没有模型参数
@@ -37,7 +42,9 @@ kNN.fit(X_train, y_train)
 kNN.score(X_test, y_test)
 ```
 
+```terminal
 0.9888888888888889
+```
 
 ## 寻找最好的k
 
@@ -55,8 +62,10 @@ print("best_k =", best_k)
 print("best_score =", best_score)
 ```
 
+```terminal
 best_k = 4
 best_score = 0.9916666666666667
+```
 
 ## 考虑距离？不考虑距离？
 
@@ -79,9 +88,11 @@ print("best_k =", best_k)
 print("best_score =", best_score)
 ```
 
+```terminal
 best_method = uniform
 best_k = 4
 best_score = 0.9916666666666667
+```
 
 ## 距离的定义
 
@@ -135,8 +146,10 @@ print("best_k =", best_k)
 print("best_score =", best_score)
 ```
 
+```terminal
 best_p = 2
 best_method = uniform
 best_k = 4
 best_score = 0.9916666666666667
 Wall time: 29.7 s
+```
