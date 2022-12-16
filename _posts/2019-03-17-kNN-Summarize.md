@@ -1,3 +1,8 @@
+---
+layout: post
+title: The Summarize of kNN
+tag: ML
+---
 
 # 更多有关k近邻算法
 
