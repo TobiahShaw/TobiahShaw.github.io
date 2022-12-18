@@ -1,3 +1,9 @@
+---
+layout: post
+title: The Linear Regression
+tag: ML
+---
+
 # 线性回归算法
 
 - 解决回归问题
