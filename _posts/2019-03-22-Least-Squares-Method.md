@@ -1,3 +1,8 @@
+---
+layout: post
+title: Least Squareas Method
+tag: ML
+---
 
 # 最小二乘法
 
