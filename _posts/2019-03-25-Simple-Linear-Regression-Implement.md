@@ -1,3 +1,9 @@
+---
+layout: post
+title: Simple Linear Regression Implement
+tag: ML
+---
+
 # 线性回归简单实现
 
 根据上一小结得出的结论，简单实现一个线性回归算法。
