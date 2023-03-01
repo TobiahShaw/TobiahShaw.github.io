@@ -12,11 +12,15 @@ tag: other
 
 ## 解决方案
 
-尝试指定端口号22.编辑文件```~/.ssh/config```，增加以下内容：
+1. 验证连接性```ssh -T git@github.com -p 22```
+
+2. 编辑文件```~/.ssh/config```，增加以下内容指定端口和IdentityFile：
 
 ```
 # github
 Host github.com
 HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_ed25519
 Port 22
 ```
