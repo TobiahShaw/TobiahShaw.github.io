@@ -24,3 +24,6 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_ed25519
 Port 22
 ```
+## 最终结论
+
+如果指定 ssh key 和端口都无法解决，发生后又能恢复的，考虑是网络原因导致的。
