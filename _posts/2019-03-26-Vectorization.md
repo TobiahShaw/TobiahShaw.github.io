@@ -1,3 +1,8 @@
+---
+layout: post
+title: Vectorization
+tag: ML
+---
 # 向量化运算
 
 $$a = \frac{\sum_{i=1}^m(x^{(i)} - \bar{x})(y^{(i)} - \bar{y})}{\sum_{i=1}^m(x^{(i)} - \bar{x})^2}$$
