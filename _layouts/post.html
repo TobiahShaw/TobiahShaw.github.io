@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
 <div class="post">
     <a class="post__back" href="/">&lt;-- home</a>
     <h1 class="post__title">{{ page.title }}</h1>
