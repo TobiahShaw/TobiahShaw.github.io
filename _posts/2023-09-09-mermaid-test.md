@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mermaid 测试
-tag: Android
+tag: other
 ---
 测试mermaid
 
