@@ -21,11 +21,6 @@
     <link rel="icon" href="/assets/img/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
-    </script>
     <script src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -42,6 +37,11 @@
     <div class="wrapper">
         {{ content }}
     </div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
 
 </body>
 
