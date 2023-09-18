@@ -16,3 +16,4 @@ Google 推出的 Android 平台的组件，意图替代 ViewPage。在使用过�
 
 1. 在 fragment#OnDestroyView 方法中将 ViewPager2 的 adapter 设置为空；
 2. 使用 FragmentStateAdapter 时，将 FragmentManager 传入 childFragmentManager，并且将 lifecycle 指定为其 viewLifecycleOwner.lifecycle；
+3. 如果你使用的时kotlin，可以在 View#doOnDetach 时也将 ViewPager2 的 adapter 设置为空；
