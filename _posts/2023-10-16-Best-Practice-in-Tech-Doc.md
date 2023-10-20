@@ -20,6 +20,7 @@ tag: other
 2. 文档中的图表往往使用其他软件绘制，其他人在没有源文件的情况下难以维护；
 3. 文档中包含较多的资源文件会导致整个文档的大小变大，下载缓慢、占用资源；
 4. 使用多软件编写文档，软件付费策略各不相同合规性难以保证；
+5. 维护文档的软件的跨平台性。
 
 ## 解决方案及其优势
 
@@ -28,6 +29,13 @@ tag: other
 1. 利用 Markdown 来编写文档，实际工程项目中很多都会包含```README.MD```文件，我们可以使用 Markdown 将文档和项目同步进行维护；
 2. 使用对 Markdown 友好的 Mermaid 来处理所需图标，以用来解决图表维护、文档大小的问题；
 3. 使用开源/免费软件来进行文档维护。
+
+### 软件选择
+
+1. 编辑器 [VS code](https://code.visualstudio.com/)，其 [license](https://code.visualstudio.com/license?lang=zh-cn) 授予您使用该软件的某些权利，微软保留所有其他权利。您可以使用该软件任意数量的副本，以开发并测试您的应用程序，包括在您的内部公司网络内部署；
+2. Markdown 插件（用于预览，可选，建议安装）选择 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)，其 [license](https://marketplace.visualstudio.com/items/yzhang.markdown-all-in-one/license) 为MIT；
+3. 图表处理使用 [Mermaid](https://mermaid.js.org/)， 其 [license](https://github.com/mermaid-js/mermaid/blob/develop/LICENSE) 为MIT；
+4. Mermaid 插件（用于预览，可选）选择 [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)，其 [license](https://marketplace.visualstudio.com/items/bierner.markdown-mermaid/license) 为MIT；
 
 ## 实例
 
