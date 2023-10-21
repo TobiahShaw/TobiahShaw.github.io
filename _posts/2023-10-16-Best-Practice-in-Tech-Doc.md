@@ -37,6 +37,8 @@ tag: other
 3. 图表处理使用 [Mermaid](https://mermaid.js.org/)， 其 [license](https://github.com/mermaid-js/mermaid/blob/develop/LICENSE) 为MIT；
 4. Mermaid 插件（用于预览，可选）选择 [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)，其 [license](https://marketplace.visualstudio.com/items/bierner.markdown-mermaid/license) 为MIT；
 
+以上软件、插件、项目均提供Windows、Linux、MacOS 甚至 Web 端支持。
+
 ## 实例
 
 ### VS code
