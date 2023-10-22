@@ -41,6 +41,50 @@ tag: other
 
 ## 实例
 
+| version | author | date | comment |
+| - | - | - | - |
+| 1.0 | mermaid group | 2023-10-22 | demo |
+
+- [Mermaid项目文档](#mermaid项目文档)
+  - [一、简介](#一简介)
+  - [二、示例](#二示例)
+    - [流程图](#流程图)
+
+
+### Mermaid项目文档
+
+Mermaid 被提名并获得了 JS Open Source Awards (2019) 的 "The most exciting use of technology" 奖项!!!
+
+感谢所有参与进来提交 PR，解答疑问的人们! 
+
+#### 一、简介
+
+Mermaid 是一个基于 Javascript 的图表绘制工具，通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。Mermaid 诞生的主要目的是让文档的更新能够及时跟上开发进度。
+
+#### 二、示例
+
+下面是一些可以使用 Mermaid 创建的图表示例。点击 [语法](https://mermaid-js.github.io/mermaid/#/n00b-syntaxReference) 查看详情。
+
+##### 流程图
+
+```
+flowchart LR
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+<pre class="mermaid">
+flowchart LR
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+</pre>
+
+## 软件使用
+
 ### VS code
 
 ### Markdown
