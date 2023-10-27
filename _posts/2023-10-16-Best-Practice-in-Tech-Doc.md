@@ -307,6 +307,42 @@ gantt
         another task    :24d
 </pre>
 
+#### git图
+
+```
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+```
+
+<pre class="mermaid">
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+</pre>
+
 ## 软件使用
 
 ### VS code
