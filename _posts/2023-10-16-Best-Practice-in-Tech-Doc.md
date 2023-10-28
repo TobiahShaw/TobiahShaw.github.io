@@ -45,11 +45,20 @@ tag: other
 | - | - | - | - |
 | 1.0 | mermaid group | 2023-10-22 | demo |
 
+```
 - [Mermaid项目文档](#mermaid项目文档)
   - [一、简介](#一简介)
   - [二、示例](#二示例)
     - [流程图](#流程图)
-
+    - [时序图](#时序图)
+    - [类图](#类图)
+    - [状态图](#状态图)
+    - [ER图](#er图)
+    - [四象限图](#四象限图)
+    - [用户体验旅程图](#用户体验旅程图)
+    - [甘特图](#甘特图)
+    - [git图](#git图)
+```
 
 ### Mermaid项目文档
 
@@ -83,7 +92,7 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 </pre>
 
-#### 时序图
+##### 时序图
 
 ```
 sequenceDiagram
@@ -109,7 +118,7 @@ John->>Bob: How about you?
 Bob-->>John: Jolly good!
 </pre>
 
-#### 类图
+##### 类图
 
 ```
 classDiagram
@@ -163,7 +172,7 @@ classDiagram
     }
 </pre>
 
-#### 状态图
+##### 状态图
 
 ```
 stateDiagram-v2
@@ -185,7 +194,7 @@ Moving --> Crash
 Crash --> [*]
 </pre>
 
-#### ER图
+##### ER图
 
 ```
 erDiagram
@@ -219,7 +228,7 @@ erDiagram
     }
 </pre>
 
-#### 四象限图
+##### 四象限图
 
 ```
 quadrantChart
@@ -255,7 +264,7 @@ quadrantChart
     Campaign F: [0.35, 0.78]
 </pre>
 
-#### 用户体验旅程图
+##### 用户体验旅程图
 
 ```
 journey
@@ -281,7 +290,7 @@ journey
     Sit down: 3: Me
 </pre>
 
-#### 甘特图
+##### 甘特图
 
 ```
 gantt
@@ -307,7 +316,7 @@ gantt
         another task    :24d
 </pre>
 
-#### git图
+##### git图
 
 ```
 ---
