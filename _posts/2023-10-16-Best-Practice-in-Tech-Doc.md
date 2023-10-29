@@ -64,8 +64,6 @@ tag: other
 
 Mermaid 被提名并获得了 JS Open Source Awards (2019) 的 "The most exciting use of technology" 奖项!!!
 
-感谢所有参与进来提交 PR，解答疑问的人们! 
-
 #### 一、简介
 
 Mermaid 是一个基于 Javascript 的图表绘制工具，通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。Mermaid 诞生的主要目的是让文档的更新能够及时跟上开发进度。
@@ -352,12 +350,5 @@ gitGraph
    commit
 </pre>
 
-## 软件使用
+## 参考链接
 
-### VS code
-
-### Markdown
-
-### Mermaid
-
-#### mermaid 的其他功能
