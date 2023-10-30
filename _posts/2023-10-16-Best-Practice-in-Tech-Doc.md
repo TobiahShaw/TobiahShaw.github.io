@@ -352,3 +352,5 @@ gitGraph
 
 ## 参考链接
 
+[markdown](http://daringfireball.net/projects/markdown/)
+[markdown 中文网](https://www.markdown.cn/)
