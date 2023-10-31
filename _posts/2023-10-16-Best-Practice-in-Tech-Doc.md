@@ -352,5 +352,8 @@ gitGraph
 
 ## 参考链接
 
-[markdown](http://daringfireball.net/projects/markdown/)
-[markdown 中文网](https://www.markdown.cn/)
+[markdown](http://daringfireball.net/projects/markdown/)  
+[markdown 中文网](https://www.markdown.cn/)  
+[mermaid](https://mermaid.js.org/)  
+[mermaid document](https://mermaid.js.org/intro/)  
+[mermaid live editor](https://mermaid.live/)  
